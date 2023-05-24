@@ -54,6 +54,8 @@ p {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .container {
   min-width: 320px;
@@ -351,13 +353,43 @@ img {
 .hero-section {
   background-color: var(--hero-background-color);
   padding: 112px 0;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero.jpg);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/hero/Dark-bgmobile@1x.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 1440px;
   max-height: 600px;
   margin: 0 auto;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/hero/Dark-bgmobile@2x.jpg);
+  }
+}
+@media only screen and (min-width: 429px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/hero/Dark-bgtablet@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero/Dark-bgtablet@2x.jpg);
+    }
+  }
+}
+@media only screen and (min-width: 769px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero/herodesktop@2x.jpg);
+    }
+  }
 }
 @media only screen and (min-width: 1158px) {
   .hero-section {
@@ -769,7 +801,7 @@ img {
     row-gap: 48px;
   }
 }
-.image {
+/* .image {
   width: 396px;
   height: 280px;
 }
@@ -778,7 +810,7 @@ img {
     width: 356px;
     height: 300px;
   }
-}
+} */
 
 @media only screen and (min-width: 768px) {
   .project-list {

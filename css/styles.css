@@ -37,7 +37,7 @@ body {
   font-family: var(--primary-font);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding-top: 74px;
+  padding-top: 70px;
 }
 /* body > .header {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -59,7 +59,7 @@ img {
 }
 .container {
   min-width: 320px;
-  max-width: 396px;
+  max-width: 428px;
   margin: 0 auto;
   padding: 0 16px;
 
@@ -68,7 +68,7 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -101,7 +101,11 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
-  margin-right: 60px;
+}
+@media only screen and (min-width: 768px) {
+  .nav-logo {
+    margin-right: 120px;
+  }
 }
 @media only screen and (min-width: 1158px) {
   .nav-logo {
@@ -118,7 +122,7 @@ img {
   color: var(--header-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link .active {
+.nav-link.active {
   color: var(--secondary-btn-color);
 }
 /* .nav-list-item {
@@ -132,7 +136,7 @@ img {
   left: 0;
   bottom: -1px;
 }
-.nav-link .active::after {
+.nav-link.active::after {
   background-color: var(--secondary-btn-color);
 }
 .header {
@@ -309,8 +313,8 @@ img {
   color: var(--text-color);
   font-style: normal;
   margin-left: auto;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  /* padding-top: 6px;
+  padding-bottom: 6px; */
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -320,10 +324,13 @@ img {
   letter-spacing: 0.04em;
   color: var(--text-color);
 }
+/* .contact-list-item:first-child {
+  margin-bottom: 12px;
+} */
 @media only screen and (min-width: 1158px) {
   .contact-link {
-    padding-top: var(--indent);
-    padding-bottom: var(--indent);
+    /* padding-top: var(--indent);
+    padding-bottom: var(--indent); */
 
     font-size: 16px;
     line-height: 1.5;
@@ -368,7 +375,7 @@ img {
       url(../images/hero/Dark-bgmobile@2x.jpg);
   }
 }
-@media only screen and (min-width: 429px) {
+@media only screen and (min-width: 767px) {
   .hero-section {
     max-width: 768px;
     max-height: 436px;
@@ -384,7 +391,7 @@ img {
     }
   }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1157px) {
   .hero-section {
     max-width: 1440px;
     max-height: 600px;
@@ -740,6 +747,7 @@ img {
 }
 
 .client {
+  --indent: 16px;
   padding-left: 0;
   display: flex;
   justify-content: center;
@@ -747,22 +755,30 @@ img {
   row-gap: var(--indentvert);
   column-gap: var(--indent);
 }
+@media only screen and (min-width: 768px) {
+  .client {
+    --indent: 24px;
+  }
+}
 .client-list {
-  --items: 2;
-  flex-basis: calc((100% - (var(--indent)) * (var(--items)-1)) / var(--items));
+  --indent: 16px;
+  /* --items: 2;
+  flex-basis: calc((100% - (var(--indent)) * (var(--items)-1)) / var(--items)); */
 }
 @media only screen and (min-width: 768px) {
   .client-list {
-    --items: 3;
+    --indent: 24px;
+    /* --items: 3;
+    flex-basis: calc((100% - (var(--indent)) * (var(--items)-1)) / var(--items)); */
   }
 }
 @media only screen and (min-width: 1158pxpx) {
   .client-list {
-    --items: 6;
+    /* --items: 6; */
   }
 }
 .client-link {
-  width: 168px;
+  width: 190px;
   height: 88px;
   display: flex;
   justify-content: center;
@@ -770,10 +786,14 @@ img {
   border: 1px solid var(--subtle-text-color);
   color: var(--subtle-text-color);
   border-radius: 4px;
-  cursor: pointer;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media only screen and (min-width: 768px) {
+  .client-link {
+    width: 168px;
+  }
+}
 .client-link:hover,
 .client-link:focus {
   border: 1px solid var(--secondary-btn-color);
@@ -897,7 +917,7 @@ img {
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container {
-    padding-left: 96px;
+    padding-left: 108px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -1101,7 +1121,6 @@ img {
   max-width: 392px;
   height: 95%;
   max-height: 584px;
-  overflow: scroll;
 
   position: absolute;
   left: 50%;
@@ -1121,6 +1140,11 @@ img {
 
   transform-origin: top left;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (max-width: 767px) {
+  .modal {
+    overflow: scroll;
+  }
 }
 @media only screen and (min-width: 768px) {
   .modal {

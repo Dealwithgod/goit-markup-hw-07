@@ -175,7 +175,7 @@ img {
   align-items: center;
   gap: 40px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .nav-list,
   .contact-link {
     display: none;
@@ -375,7 +375,7 @@ img {
       url(../images/hero/Dark-bgmobile@2x.jpg);
   }
 }
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .hero-section {
     max-width: 768px;
     max-height: 436px;
@@ -391,13 +391,14 @@ img {
     }
   }
 }
-@media only screen and (min-width: 1157px) {
+@media only screen and (min-width: 1158px) {
   .hero-section {
     max-width: 1440px;
     max-height: 600px;
   }
   .hero-section {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/hero/herodesktop@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero-section {
@@ -667,6 +668,7 @@ img {
 @media only screen and (min-width: 1158px) {
   .about-section {
     display: block;
+    padding-top: 0;
   }
 }
 .title-container {
@@ -997,6 +999,7 @@ img {
 @media only screen and (min-width: 768px) {
   .social-media {
     display: block;
+    margin-bottom: 0;
   }
 }
 .social-media-link {
